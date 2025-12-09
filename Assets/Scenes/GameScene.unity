@@ -1084,8 +1084,8 @@ GameObject:
   - component: {fileID: 1242756400}
   - component: {fileID: 1242756399}
   - component: {fileID: 1242756398}
-  m_Layer: 0
-  m_Name: Plane
+  m_Layer: 6
+  m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1826,6 +1826,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _orientationTransform: {fileID: 20257732}
   _movementSpeed: 20
+  _jumpKey: 32
+  _jumpForce: 8
+  _jumpCooldown: 1
+  _canJump: 1
+  _slideKey: 0
+  _slideMultiplier: 0
+  _playerHeight: 1
+  _groundLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &2125726594
 GameObject:
   m_ObjectHideFlags: 0
