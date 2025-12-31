@@ -1794,6 +1794,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2043175932}
   - component: {fileID: 2043175934}
+  - component: {fileID: 2043175936}
+  - component: {fileID: 2043175937}
   - component: {fileID: 2043175933}
   - component: {fileID: 2043175935}
   m_Layer: 0
@@ -1866,6 +1868,8 @@ MonoBehaviour:
   _jumpForce: 8
   _jumpCooldown: 0.5
   _canJump: 1
+  _airMultiplier: 0.2
+  _airDrag: 0.75
   _slideKey: 306
   _slideMultiplier: 2
   _slideDrag: 2
@@ -1897,6 +1901,31 @@ CapsuleCollider:
   m_Height: 0.85
   m_Direction: 1
   m_Center: {x: 0, y: 0.1, z: 0}
+--- !u!114 &2043175936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2043175931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 142dd4a957e1e3f48b8ae272b5d46d0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2043175937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2043175931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b57ba2e4a32ca8748b7d262cb75f91a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerAnimator: {fileID: 5249982152166274918}
 --- !u!1 &2097828760
 GameObject:
   m_ObjectHideFlags: 0
@@ -2042,11 +2071,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2afb39303ecef7247979fa910aaa16eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerTransform: {fileID: 0}
-  _orientationTransform: {fileID: 0}
-  _playerVisualTransform: {fileID: 0}
+  _playerTransform: {fileID: 2043175932}
+  _orientationTransform: {fileID: 20257732}
+  _playerVisualTransform: {fileID: 4868530144541847007}
   inputDirection: {x: 0, y: 0, z: 0}
-  _rotationSpeed: 0
+  _rotationSpeed: 7
 --- !u!1 &2125726594
 GameObject:
   m_ObjectHideFlags: 0
@@ -2382,6 +2411,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4868530144541847007}
+  - component: {fileID: 5249982152166274918}
   m_Layer: 0
   m_Name: PlayerVisual
   m_TagString: Untagged
@@ -2389,6 +2419,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!95 &5249982152166274918
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5249982152166274917}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0f4d84c15e5637f459f5b80cd4203531, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &5497853550127720285
 GameObject:
   m_ObjectHideFlags: 0
@@ -2416,7 +2468,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8469642198972753539}
   m_Layer: 0
-  m_Name: root
+  m_Name: Root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

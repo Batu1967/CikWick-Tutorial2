@@ -1,12 +1,12 @@
-using System.IO.Compression;
-using NUnit.Framework;
-using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.InputSystem;
+using System;
+using UnityEditor.VersionControl;
 
 public class PlayerController : MonoBehaviour
 {
+    public event Action OnPlayerJumped;
+
+
     [Header("References")]
      [SerializeField] private Transform _orientationTransform;
 
@@ -149,6 +149,7 @@ public class PlayerController : MonoBehaviour
     }
     private void SetPlayerJumping()
     {
+        OnPlayerJumped?.Invoke();
         _playerRigidbody.linearVelocity = new Vector3(_playerRigidbody.linearVelocity.x, 0f, _playerRigidbody.linearVelocity.z);
         _playerRigidbody.AddForce(transform.up * _jumpForce, ForceMode.Impulse);
     }
