@@ -819,7 +819,7 @@ Transform:
   m_GameObject: {fileID: 436938848}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalPosition: {x: -1.005, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -838,9 +838,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f44b07167d66604fb94b1a94429dd32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _wheatDesignSO: {fileID: 11400000, guid: 05557257d5d8b064f9dfdae39e079a87, type: 2}
   _playerController: {fileID: 2043175934}
-  _movementDecreaseSpeed: -25
-  _resetBoostDuration: 5
 --- !u!1 &511589865
 GameObject:
   m_ObjectHideFlags: 0
@@ -1312,8 +1311,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1249705313}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1, y: 0.3, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.014000058, y: 0.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2049,9 +2048,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05383b9a541c25845ac44eedc5bcbed9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _wheatDesignSO: {fileID: 11400000, guid: 22f11edb93c28c6478b614d7e363bbd3, type: 2}
   _playerController: {fileID: 2043175934}
-  _movementIncreaseSpeed: 15
-  _resetBoostDuration: 5
 --- !u!1 &1886842177
 GameObject:
   m_ObjectHideFlags: 0
@@ -2119,9 +2117,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d334968b352864e4c93f085ca1e3f675, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _wheatDesignSO: {fileID: 11400000, guid: 079fcf57544c5ce44939bce1f8764d52, type: 2}
   _playerController: {fileID: 2043175934}
-  _ForceIncrease: 8
-  _resetBoostDuration: 5
 --- !u!1 &1973615305
 GameObject:
   m_ObjectHideFlags: 0
@@ -2292,10 +2289,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _orientationTransform: {fileID: 20257732}
   _movementKey: 304
-  _movementSpeed: 40
+  _movementSpeed: 45
   _jumpKey: 32
   _jumpForce: 8
-  _jumpCooldown: 0.5
+  _jumpCooldown: 0.6
   _canJump: 1
   _airMultiplier: 0.2
   _airDrag: 0.75

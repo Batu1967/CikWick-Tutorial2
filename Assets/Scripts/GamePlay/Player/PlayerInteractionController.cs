@@ -9,7 +9,5 @@ public class PlayerInteractionController : MonoBehaviour
         {
             collectible.Collect();
         }
-
-
     }
 }
