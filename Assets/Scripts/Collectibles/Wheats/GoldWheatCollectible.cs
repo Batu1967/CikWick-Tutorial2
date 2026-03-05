@@ -9,7 +9,6 @@ public class GoldWheatCollectible : MonoBehaviour, iCollectible
     {
         if (_playerController != null && _wheatDesignSO != null)
         {
-            // Alt çizgisiz ve büyük harf ile başlayan yeni isimleri kullanıyoruz
             _playerController.SetMovementSpeed(_wheatDesignSO.IncreaseDecreaseMultiplier, _wheatDesignSO.ResetBoostDuration);
             Destroy(gameObject);
         }

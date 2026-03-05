@@ -198,5 +198,10 @@ public class PlayerController : MonoBehaviour
         return _isSliding;
     }
 
+    public Rigidbody GetPlayerRigidbody()
+    {
+        return _playerRigidbody;
+    }
+
     #endregion
 }
